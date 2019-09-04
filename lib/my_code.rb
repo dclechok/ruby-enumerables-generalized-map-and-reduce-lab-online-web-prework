@@ -19,9 +19,9 @@ def reduce(source_array, start_val = nil)
     x = 1
   end
     
-  c = source_array.length
-  c.times do |i|
+  while x < array.length
     total = yield(total, source_array[x])
+    x += 1
   end
   total
 end
