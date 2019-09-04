@@ -10,7 +10,7 @@ end
 
 
 
-def reduce(source_array, start_val*)
+def reduce(source_array, start_val = nil)
   if start_val
     total = start_val
     x = 0
@@ -19,7 +19,7 @@ def reduce(source_array, start_val*)
     x = 1
   end
     
-  while x < array.length
+  while x < source_array.length
     total = yield(total, source_array[x])
     x += 1
   end
